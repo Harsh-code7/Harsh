@@ -1,0 +1,355 @@
+
+header{
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(17, 11, 0);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size: .8rem;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header div{
+ position:absolute;
+ left: 0;
+padding: .5rem;
+}
+header div img{
+ height: 100%;
+ width: 100px;
+
+}
+
+header ul{
+  display: flex;
+  justify-content: space-around;
+width: 40%;
+min-width: 500px;
+}
+
+header ul li{
+  list-style: none;
+}
+#video {
+  position: relative;
+  width: 100%;
+}
+video{
+width: 100%;
+height: 100%;
+}
+
+#video img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+video{
+ 
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Ensures the video covers the viewport without distortion */
+  
+  
+}
+/* Container Style */
+#container {
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 5px; /* Spacing between cards */
+  max-width: 100%; /* Ensures container never exceeds 100% of available space */
+  margin: 0 auto;
+  padding: 2px;
+  box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+/* Card Styles */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* To allow absolute positioning of the h3 */
+  height: 100%; /* Ensure cards take full height in their grid cell */
+}
+
+.card h3 {
+  text-shadow: 2px 2px 2px 2px black;
+  width: 40%;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #ffffff;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  transition: none; /* Remove any transition/animation effect from the h3 */
+
+}
+
+
+.card p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.card img {
+  width: 100%; /* Ensure images fill the card */
+  /* border-radius: 5px; */
+  height: 100%;
+}
+
+/* Hover Effect for Card */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  #container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  #container {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+}
+
+#greetCard{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: orange; */
+}
+
+
+ #greenGreet{
+background-color: rgb(9 20 5);
+border: 2px solid 4px;
+width: 50%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+#greenGreet h1{
+color: white;
+}
+ #whiteGreet{
+background-color: rgb(247, 247, 247);
+border: 2px solid 4px;
+width: 50%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding: 1rem;
+
+}
+#whiteGreet div{
+  width: 80%;
+}
+#whiteGreet div h2{ 
+color: rgb(57, 53, 53);
+}
+#whiteGreet p{
+  color: rgb(110, 109, 109);
+}
+
+
+/* footer */
+footer {
+  width: 100%;
+  height: auto;
+  background-color: rgb(9 20 5); /* Beautiful dark blue-grey */
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3rem;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+footer div {
+  flex: 1;
+  min-width: 250px; /* Ensure responsiveness */
+  margin: 1rem;
+  padding: 1rem;
+}
+
+footer h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #ffffff; /* Gold color for accent */
+}
+
+footer h3 {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #E67E22; /* Slightly lighter gold */
+  margin-top: -0.5rem;
+}
+
+footer p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+footer span {
+  font-size: 1rem;
+  color: #ECF0F1; /* Light grey */
+  cursor: pointer;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+footer div:nth-child(3) h1 {
+  margin: 0.5rem 0;
+}
+
+footer div:nth-child(3) h1:hover {
+  color: #F39C12; /* Gold hover effect for social media links */
+}
+
+footer div:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+footer div:nth-child(3) .icon{
+ color: red;
+ width: 40px;
+ height: 40px;
+ margin-left: .5rem;
+ border-radius: .5rem;
+}
+
+
+#fb{
+  color: rgb(13, 70, 228);
+  background-color: white;
+}
+#tube{
+  color: rgb(209, 15, 15);
+  background-color: white;
+}
+#gram{
+  color: rgb(222, 18, 123);
+  background-color: white;
+ 
+}
+
+footer div:nth-child(2) {
+  text-align: center;
+  font-family: serif;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer div {
+    text-align: center;
+    margin: 1rem 0;
+  }
+}
+
+
+/* star rating */
+#starRatingBlock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#starRatingBlock > div {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px; /* Adjust as needed */
+  transition: transform 0.3s ease-in-out;
+}
+
+#starRatingBlock > div:hover {
+  transform: translateY(-5px);
+}
+
+#starRatingBlock h1 {
+  font-family: 'Arial', sans-serif;
+  color: #2c3e50;
+  font-size: 18px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+#starRatingBlock span {
+  color: #f39c12;
+  font-size: 20px;
+}
+
+#starRatingBlock p {
+  font-family: 'Georgia', serif;
+  color: #1d2c3b;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+#starRatingBlock h4 {
+  font-family: 'Arial', sans-serif;
+  color: #526162;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Make sure the layout is responsive */
+@media (max-width: 768px) {
+  #starRatingBlock {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #starRatingBlock > div {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #starRatingBlock h1 {
+    font-size: 16px;
+  }
+
+  #starRatingBlock p {
+    font-size: 14px;
+  }
+
+  #starRatingBlock h4 {
+    font-size: 14px;
+  }
+}
